@@ -134,4 +134,3744 @@
 
         .subtitle {
             font-size: clamp(0.8rem, 2.2vw, 0.95rem);
-            color: rgba(200,
+            color: rgba(200, 170, 220, 0.7);
+            font-weight: 300;
+            letter-spacing: 4px;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+        }
+
+        .story-text {
+            font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+            color: rgba(220, 200, 235, 0.85);
+            line-height: 1.7;
+            max-width: 500px;
+            margin-bottom: 22px;
+            font-weight: 300;
+        }
+
+        /* ============================================
+           DISNEY-STYLE CHARACTER DESIGNS
+           ============================================ */
+
+        /* Knight Character - Full Body */
+        .knight-character {
+            width: 90px;
+            height: 130px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        /* Knight Head */
+        .knight-head {
+            width: 36px;
+            height: 40px;
+            background: linear-gradient(180deg, #ffd5b5 0%, #e8b896 100%);
+            border-radius: 50% 50% 45% 45%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+
+        /* Knight Hair */
+        .knight-head::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -3px;
+            width: 42px;
+            height: 22px;
+            background: linear-gradient(180deg, #5a3825 0%, #3d2517 100%);
+            border-radius: 50% 50% 0 0;
+        }
+
+        /* Knight Face Features */
+        .knight-face {
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 18px;
+        }
+
+        .knight-face::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 3px;
+            width: 6px;
+            height: 6px;
+            background: #3d2517;
+            border-radius: 50%;
+            box-shadow: 18px 0 0 #3d2517;
+        }
+
+        .knight-face::after {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 3px;
+            background: #c9967a;
+            border-radius: 0 0 50% 50%;
+        }
+
+        /* Knight Crown/Helmet */
+        .knight-crown {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 44px;
+            height: 18px;
+            background: linear-gradient(180deg, #ffd700 0%, #daa520 50%, #b8860b 100%);
+            clip-path: polygon(0% 100%, 10% 40%, 25% 100%, 40% 20%, 50% 100%, 60% 20%, 75% 100%, 90% 40%, 100% 100%);
+            z-index: 4;
+        }
+
+        .knight-crown::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(180deg, #ffd700, #b8860b);
+            border-radius: 2px;
+        }
+
+        /* Knight Body - Armor */
+        .knight-body {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #6a8caf 0%, #4a6a8a 50%, #3a5a7a 100%);
+            position: absolute;
+            top: 38px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 8px 8px 12px 12px;
+            z-index: 2;
+        }
+
+        /* Armor Details */
+        .knight-body::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 30px;
+            background: linear-gradient(180deg, #c9a227 0%, #8b7014 100%);
+            clip-path: polygon(50% 0%, 100% 30%, 80% 100%, 20% 100%, 0% 30%);
+        }
+
+        /* Knight Cape */
+        .knight-cape {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 70px;
+            background: linear-gradient(180deg, #c44569 0%, #8b2a4a 100%);
+            clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 70% 85%, 50% 100%, 30% 85%, 0% 100%);
+            z-index: 1;
+            animation: capeFlow 3s ease-in-out infinite;
+        }
+
+        @keyframes capeFlow {
+            0%, 100% { clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 70% 85%, 50% 100%, 30% 85%, 0% 100%); }
+            50% { clip-path: polygon(10% 0%, 90% 0%, 95% 100%, 65% 90%, 50% 100%, 35% 90%, 5% 100%); }
+        }
+
+        /* Knight Legs */
+        .knight-legs {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 30px;
+        }
+
+        .knight-legs::before, .knight-legs::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 14px;
+            height: 28px;
+            background: linear-gradient(180deg, #4a5568 0%, #2d3748 100%);
+            border-radius: 4px 4px 6px 6px;
+        }
+
+        .knight-legs::before { left: 4px; }
+        .knight-legs::after { right: 4px; }
+
+        /* Knight Sword */
+        .knight-sword {
+            position: absolute;
+            top: 35px;
+            right: -20px;
+            width: 50px;
+            height: 8px;
+            z-index: 5;
+            transform-origin: left center;
+        }
+
+        .knight-sword::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 12px;
+            height: 8px;
+            background: linear-gradient(90deg, #8b7014 0%, #c9a227 50%, #8b7014 100%);
+            border-radius: 2px;
+        }
+
+        .knight-sword::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 12px;
+            width: 38px;
+            height: 6px;
+            background: linear-gradient(180deg, #e8e8e8 0%, #a0a0a0 50%, #c0c0c0 100%);
+            clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* ============================================
+           VILLAIN CHARACTER DESIGNS
+           ============================================ */
+
+        .villain-character {
+            width: 95px;
+            height: 130px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        /* Villain Cloak */
+        .villain-cloak {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 75px;
+            height: 95px;
+            background: linear-gradient(180deg, #2d1f3d 0%, #1a1025 50%, #0d0812 100%);
+            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 75% 90%, 50% 100%, 25% 90%, 0% 100%);
+            z-index: 1;
+            animation: cloakSway 4s ease-in-out infinite;
+        }
+
+        @keyframes cloakSway {
+            0%, 100% { clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 75% 90%, 50% 100%, 25% 90%, 0% 100%); }
+            50% { clip-path: polygon(20% 0%, 80% 0%, 97% 100%, 72% 92%, 50% 100%, 28% 92%, 3% 100%); }
+        }
+
+        /* Villain Hood */
+        .villain-hood {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 55px;
+            height: 50px;
+            background: linear-gradient(180deg, #3d2a4d 0%, #2d1f3d 100%);
+            border-radius: 50% 50% 40% 40%;
+            z-index: 2;
+        }
+
+        .villain-hood::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 45px;
+            height: 35px;
+            background: #0d0812;
+            border-radius: 50% 50% 40% 40%;
+        }
+
+        /* Villain Eyes */
+        .villain-eyes {
+            position: absolute;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 35px;
+            height: 14px;
+            z-index: 3;
+        }
+
+        .villain-eyes::before, .villain-eyes::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 12px;
+            height: 8px;
+            background: radial-gradient(ellipse, #ff4444 0%, #cc0000 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 15px #ff4444, 0 0 30px rgba(255, 68, 68, 0.5);
+            animation: eyePulse 2s ease-in-out infinite;
+        }
+
+        .villain-eyes::before { left: 0; }
+        .villain-eyes::after { right: 0; }
+
+        @keyframes eyePulse {
+            0%, 100% { box-shadow: 0 0 15px #ff4444, 0 0 30px rgba(255, 68, 68, 0.5); }
+            50% { box-shadow: 0 0 25px #ff6666, 0 0 50px rgba(255, 68, 68, 0.8); }
+        }
+
+        /* Villain Staff */
+        .villain-staff {
+            position: absolute;
+            top: 10px;
+            left: -15px;
+            width: 8px;
+            height: 100px;
+            background: linear-gradient(180deg, #4a3a5a 0%, #2d1f3d 100%);
+            border-radius: 4px;
+            z-index: 0;
+        }
+
+        .villain-staff::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, #9933ff 0%, #6600cc 50%, #330066 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 20px #9933ff, 0 0 40px rgba(153, 51, 255, 0.5);
+            animation: orbGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes orbGlow {
+            0%, 100% { box-shadow: 0 0 20px #9933ff, 0 0 40px rgba(153, 51, 255, 0.5); transform: translateX(-50%) scale(1); }
+            50% { box-shadow: 0 0 30px #aa55ff, 0 0 60px rgba(153, 51, 255, 0.8); transform: translateX(-50%) scale(1.1); }
+        }
+
+        /* Villain Variants - Progressive Scaling and Colors */
+        .villain-character.variant-1 {
+            transform: scale(1.0) !important;
+        }
+        
+        .villain-character.variant-1 .villain-cloak {
+            background: linear-gradient(180deg, #2a1a3a 0%, #1a0a2a 50%, #0a001a 100%);
+            border: 2px solid rgba(100, 60, 120, 0.4);
+        }
+        
+        .villain-character.variant-1 .villain-staff::before {
+            background: radial-gradient(circle, #7733dd 0%, #5500aa 50%, #330066 100%);
+            box-shadow: 0 0 18px #7733dd, 0 0 36px rgba(119, 51, 221, 0.5);
+        }
+        
+        .villain-character.variant-1 .villain-eyes::before,
+        .villain-character.variant-1 .villain-eyes::after {
+            background: radial-gradient(ellipse, #aa66ff 0%, #7733dd 100%);
+            box-shadow: 0 0 15px #aa66ff, 0 0 30px rgba(170, 102, 255, 0.6);
+        }
+
+        .villain-character.variant-2 {
+            transform: scale(1.2) !important;
+        }
+        
+        .villain-character.variant-2 .villain-cloak {
+            background: linear-gradient(180deg, #1a2a3a 0%, #0a1a2a 50%, #050a1a 100%);
+            border: 2px solid rgba(60, 100, 140, 0.5);
+        }
+        
+        .villain-character.variant-2 .villain-staff::before {
+            background: radial-gradient(circle, #3399ff 0%, #0066cc 50%, #003366 100%);
+            box-shadow: 0 0 22px #3399ff, 0 0 44px rgba(51, 153, 255, 0.6);
+        }
+        
+        .villain-character.variant-2 .villain-eyes::before,
+        .villain-character.variant-2 .villain-eyes::after {
+            background: radial-gradient(ellipse, #66ccff 0%, #3399ff 100%);
+            box-shadow: 0 0 15px #66ccff, 0 0 30px rgba(102, 204, 255, 0.7);
+        }
+
+        .villain-character.variant-3 {
+            transform: scale(1.4) !important;
+        }
+        
+        .villain-character.variant-3 .villain-cloak {
+            background: linear-gradient(180deg, #1a3a2a 0%, #0a2a1a 50%, #051a0a 100%);
+            border: 2px solid rgba(60, 140, 100, 0.5);
+        }
+        
+        .villain-character.variant-3 .villain-staff::before {
+            background: radial-gradient(circle, #33cc66 0%, #00aa44 50%, #006633 100%);
+            box-shadow: 0 0 24px #33cc66, 0 0 48px rgba(51, 204, 102, 0.6);
+        }
+        
+        .villain-character.variant-3 .villain-eyes::before,
+        .villain-character.variant-3 .villain-eyes::after {
+            background: radial-gradient(ellipse, #66ff99 0%, #33cc66 100%);
+            box-shadow: 0 0 15px #66ff99, 0 0 30px rgba(102, 255, 153, 0.7);
+        }
+
+        .villain-character.variant-4 {
+            transform: scale(1.6) !important;
+        }
+        
+        .villain-character.variant-4 .villain-cloak {
+            background: linear-gradient(180deg, #3a2a1a 0%, #2a1a0a 50%, #1a0a05 100%);
+            border: 2px solid rgba(140, 100, 60, 0.5);
+        }
+        
+        .villain-character.variant-4 .villain-staff::before {
+            background: radial-gradient(circle, #ff9933 0%, #cc6600 50%, #994400 100%);
+            box-shadow: 0 0 26px #ff9933, 0 0 52px rgba(255, 153, 51, 0.7);
+        }
+        
+        .villain-character.variant-4 .villain-eyes::before,
+        .villain-character.variant-4 .villain-eyes::after {
+            background: radial-gradient(ellipse, #ffcc66 0%, #ff9933 100%);
+            box-shadow: 0 0 15px #ffcc66, 0 0 30px rgba(255, 204, 102, 0.8);
+        }
+
+        .villain-character.variant-5 {
+            transform: scale(1.6) !important;
+        }
+        
+        .villain-character.variant-5 .villain-cloak {
+            background: linear-gradient(180deg, #3a1a2a 0%, #2a0a1a 50%, #1a0510 100%);
+            border: 2px solid rgba(140, 60, 100, 0.6);
+        }
+        
+        .villain-character.variant-5 .villain-staff::before {
+            background: radial-gradient(circle, #ff3399 0%, #cc0066 50%, #990044 100%);
+            box-shadow: 0 0 28px #ff3399, 0 0 56px rgba(255, 51, 153, 0.8);
+        }
+        
+        .villain-character.variant-5 .villain-eyes::before,
+        .villain-character.variant-5 .villain-eyes::after {
+            background: radial-gradient(ellipse, #ff66cc 0%, #ff3399 100%);
+            box-shadow: 0 0 15px #ff66cc, 0 0 30px rgba(255, 102, 204, 0.8);
+        }
+
+        /* Boss Villain Variant */
+        .villain-character.boss-variant {
+            width: 140px;
+            height: 180px;
+            filter: brightness(0.7) saturate(1.5);
+            transform: scale(1.8) !important;
+        }
+
+        .villain-character.boss-variant .villain-cloak {
+            width: 130px;
+            height: 155px;
+            background: linear-gradient(180deg, #2a0000 0%, #1a0000 50%, #0a0000 100%);
+            border: 2px solid rgba(200, 0, 0, 0.4);
+            box-shadow: 0 0 40px rgba(200, 0, 0, 0.5), inset 0 0 30px rgba(0, 0, 0, 0.8);
+        }
+        
+        /* Boss horns */
+        .villain-character.boss-variant .villain-cloak::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 5px;
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 35px solid #3a0000;
+            transform: rotate(-25deg);
+            filter: drop-shadow(3px 3px 5px rgba(200, 0, 0, 0.6));
+        }
+        
+        .villain-character.boss-variant .villain-cloak::after {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: 5px;
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 35px solid #3a0000;
+            transform: rotate(25deg);
+            filter: drop-shadow(-3px 3px 5px rgba(200, 0, 0, 0.6));
+        }
+
+        .villain-character.boss-variant .villain-hood {
+            width: 95px;
+            height: 85px;
+            background: linear-gradient(180deg, #3a0000 0%, #2a0000 50%, #1a0000 100%);
+            border-bottom: 4px solid rgba(200, 0, 0, 0.4);
+        }
+
+        .villain-character.boss-variant .villain-eyes::before,
+        .villain-character.boss-variant .villain-eyes::after {
+            width: 18px;
+            height: 14px;
+            background: radial-gradient(ellipse, #ff0000 0%, #cc0000 40%, #660000 100%);
+            box-shadow: 0 0 25px #ff0000, 0 0 50px rgba(255, 0, 0, 0.8), 0 0 75px rgba(255, 0, 0, 0.4);
+            animation: bossEyeGlow 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes bossEyeGlow {
+            0%, 100% { 
+                box-shadow: 0 0 25px #ff0000, 0 0 50px rgba(255, 0, 0, 0.8), 0 0 75px rgba(255, 0, 0, 0.4);
+                filter: brightness(1);
+            }
+            50% { 
+                box-shadow: 0 0 35px #ff0000, 0 0 70px rgba(255, 0, 0, 1), 0 0 105px rgba(255, 0, 0, 0.6);
+                filter: brightness(1.8);
+            }
+        }
+
+        .villain-character.boss-variant .villain-staff {
+            width: 10px;
+            height: 120px;
+            background: linear-gradient(180deg, #3a0000 0%, #2a0000 50%, #1a0000 100%);
+            left: -45px;
+            box-shadow: 0 0 15px rgba(200, 0, 0, 0.4);
+        }
+        
+        .villain-character.boss-variant .villain-staff::before {
+            width: 38px;
+            height: 38px;
+            background: radial-gradient(circle, #ff0000 0%, #cc0000 30%, #660000 60%, #330000 100%);
+            box-shadow: 0 0 35px #ff0000, 0 0 70px rgba(255, 0, 0, 0.9), 0 0 105px rgba(255, 0, 0, 0.5);
+            animation: bossOrbGlow 2s ease-in-out infinite;
+        }
+        
+        @keyframes bossOrbGlow {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 35px #ff0000, 0 0 70px rgba(255, 0, 0, 0.9), 0 0 105px rgba(255, 0, 0, 0.5);
+            }
+            50% { 
+                transform: scale(1.2);
+                box-shadow: 0 0 45px #ff0000, 0 0 90px rgba(255, 0, 0, 1), 0 0 135px rgba(255, 0, 0, 0.7);
+            }
+        }
+
+        /* ============================================
+           QUEEN IN TOWER
+           ============================================ */
+
+        .tower-scene {
+            position: relative;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .castle-tower {
+            width: 140px;
+            height: 120px;
+            margin: 0 auto;
+            position: relative;
+            transform: scale(1.8);
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 25px rgba(138, 43, 226, 0.4));
+        }
+
+        /* Tower Structure */
+        .tower-base {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 80px;
+            background: linear-gradient(180deg, #7a6a9a 0%, #5a4a7a 30%, #4a3a6a 70%, #3a2a5a 100%);
+            border-radius: 12px 12px 0 0;
+            box-shadow: inset 0 3px 15px rgba(255, 255, 255, 0.15), 
+                        inset 0 -2px 10px rgba(0, 0, 0, 0.3),
+                        0 0 30px rgba(138, 43, 226, 0.3);
+            border: 3px solid rgba(180, 150, 220, 0.4);
+        }
+
+        .tower-base::before {
+            content: '';
+            position: absolute;
+            top: -18px;
+            left: -12px;
+            width: 124px;
+            height: 22px;
+            background: linear-gradient(180deg, #7a6a9a 0%, #5a4a7a 100%);
+            clip-path: polygon(
+                0% 100%, 0% 30%, 8% 30%, 8% 0%, 16% 0%, 16% 30%, 24% 30%, 24% 0%, 
+                32% 0%, 32% 30%, 40% 30%, 40% 0%, 48% 0%, 48% 30%, 56% 30%, 56% 0%,
+                64% 0%, 64% 30%, 72% 30%, 72% 0%, 80% 0%, 80% 30%, 88% 30%, 88% 0%,
+                96% 0%, 96% 30%, 100% 30%, 100% 100%
+            );
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .tower-base::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 12px, rgba(0, 0, 0, 0.1) 12px, rgba(0, 0, 0, 0.1) 13px),
+                repeating-linear-gradient(90deg, transparent, transparent 15px, rgba(0, 0, 0, 0.08) 15px, rgba(0, 0, 0, 0.08) 16px);
+            border-radius: 6px;
+            opacity: 0.5;
+        }
+
+        /* Tower Window */
+        .tower-window {
+            position: absolute;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 52px;
+            height: 58px;
+            background: linear-gradient(180deg, 
+                        rgba(255, 215, 0, 0.15) 0%, 
+                        rgba(138, 43, 226, 0.2) 30%,
+                        #2a1a3a 50%, 
+                        #1a0a2a 100%);
+            border-radius: 50% 50% 0 0;
+            border: 4px solid #a080c0;
+            overflow: visible;
+            box-shadow: inset 0 0 25px rgba(255, 215, 0, 0.2), 
+                        inset 0 -10px 20px rgba(138, 43, 226, 0.3),
+                        0 0 20px rgba(255, 215, 0, 0.3),
+                        0 0 40px rgba(138, 43, 226, 0.4);
+        }
+
+        .tower-window::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            height: 12px;
+            background: linear-gradient(90deg, 
+                        transparent 0%, 
+                        rgba(255, 215, 0, 0.6) 20%, 
+                        rgba(255, 215, 0, 0.8) 50%,
+                        rgba(255, 215, 0, 0.6) 80%,
+                        transparent 100%);
+            border-radius: 50% 50% 0 0;
+            filter: blur(2px);
+        }
+
+        .tower-window::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle, 
+                        rgba(255, 215, 0, 0.3) 0%, 
+                        rgba(138, 43, 226, 0.2) 50%,
+                        transparent 70%);
+            border-radius: 50%;
+            animation: windowGlow 3s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes windowGlow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* Queen in Window */
+        .queen-in-tower {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 38px;
+            height: 48px;
+            z-index: 2;
+        }
+
+        .queen-head {
+            width: 24px;
+            height: 32px;
+            background: linear-gradient(180deg, 
+                        #fff5f0 0%, 
+                        #ffe8dc 40%,
+                        #ffd4c0 70%,
+                        #f0c8a8 100%);
+            border-radius: 50% 50% 48% 48%;
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: inset 0 2px 8px rgba(255, 255, 255, 0.6),
+                        inset 0 -2px 6px rgba(200, 150, 120, 0.3),
+                        0 0 15px rgba(255, 215, 0, 0.2);
+        }
+
+        .queen-head::before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 6px;
+            width: 3px;
+            height: 3px;
+            background: #6b4423;
+            border-radius: 50%;
+            box-shadow: 8px 0 0 #6b4423;
+        }
+
+        .queen-head::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 4px;
+            border: 1px solid rgba(200, 100, 100, 0.3);
+            border-top: none;
+            border-radius: 0 0 50% 50%;
+        }
+
+        .queen-hair {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 34px;
+            height: 32px;
+            background: linear-gradient(180deg, 
+                        #d4a574 0%,
+                        #c8956a 30%,
+                        #a0764f 70%,
+                        #8b6342 100%);
+            border-radius: 50% 50% 45% 45%;
+            z-index: -1;
+            box-shadow: inset 0 2px 10px rgba(255, 255, 255, 0.2),
+                        0 0 15px rgba(212, 165, 116, 0.3);
+        }
+
+        .queen-hair::before, .queen-hair::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 12px;
+            height: 30px;
+            background: linear-gradient(180deg, 
+                        #c8956a 0%,
+                        #a0764f 50%,
+                        #8b6342 100%);
+            border-radius: 50% 0 50% 50%;
+            box-shadow: inset 0 2px 8px rgba(255, 255, 255, 0.15);
+        }
+
+        .queen-hair::before { 
+            left: -6px;
+            transform: rotate(-10deg);
+        }
+        
+        .queen-hair::after { 
+            right: -6px;
+            transform: rotate(10deg) scaleX(-1);
+        }
+
+        .queen-tiara {
+            position: absolute;
+            top: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 18px;
+            background: linear-gradient(180deg, 
+                        #fff9e6 0%,
+                        #ffd700 20%, 
+                        #ffed4e 50%, 
+                        #ffd700 80%,
+                        #daa520 100%);
+            clip-path: polygon(
+                0% 100%, 
+                10% 60%, 15% 100%, 
+                25% 50%, 30% 100%, 
+                40% 40%, 45% 100%,
+                50% 0%, 
+                55% 100%, 60% 40%, 
+                70% 100%, 75% 50%,
+                85% 100%, 90% 60%,
+                100% 100%
+            );
+            z-index: 5;
+            filter: drop-shadow(0 0 12px rgba(255, 215, 0, 1)) 
+                    drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        }
+
+        .queen-tiara::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, #ff69b4 0%, #c44569 100%);
+            border-radius: 50%;
+            box-shadow: -8px 3px 0 2px #e0e0ff,
+                        8px 3px 0 2px #e0e0ff,
+                        0 0 8px rgba(255, 105, 180, 0.8);
+        }
+
+        .queen-dress {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 36px;
+            height: 28px;
+            background: linear-gradient(180deg, 
+                        #ffc0e0 0%,
+                        #ff69b4 20%, 
+                        #ff1493 50%, 
+                        #db2777 80%,
+                        #c44569 100%);
+            border-radius: 8px 8px 0 0;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.6),
+                        inset 0 2px 10px rgba(255, 255, 255, 0.3),
+                        inset 0 -2px 8px rgba(139, 42, 74, 0.5);
+            clip-path: polygon(
+                0% 100%, 0% 30%, 5% 28%, 10% 30%, 15% 28%, 20% 30%, 25% 28%,
+                30% 30%, 35% 28%, 40% 30%, 45% 28%, 50% 30%, 55% 28%,
+                60% 30%, 65% 28%, 70% 30%, 75% 28%, 80% 30%, 85% 28%,
+                90% 30%, 95% 28%, 100% 30%, 100% 100%
+            );
+        }
+
+        .queen-dress::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 3px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 
+                -4px 0 0 #fff,
+                4px 0 0 #fff,
+                -7px 2px 0 #fff,
+                7px 2px 0 #fff,
+                0 0 8px rgba(255, 255, 255, 0.8);
+        }
+
+        .queen-dress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, 
+                        transparent 0%, 
+                        rgba(255, 255, 255, 0.3) 50%, 
+                        transparent 100%);
+            animation: dressShimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes dressShimmer {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Queen Animation */
+        .queen-in-tower.speaking {
+            animation: queenSpeak 0.5s ease-in-out;
+        }
+
+        @keyframes queenSpeak {
+            0%, 100% { transform: translateX(-50%) translateY(0) scale(1); }
+            25% { transform: translateX(-50%) translateY(-4px) scale(1.03); }
+            50% { transform: translateX(-50%) translateY(-3px) scale(1.02); }
+            75% { transform: translateX(-50%) translateY(-4px) scale(1.03); }
+        }
+
+        /* Magic Connection */
+        .magic-connection {
+            position: absolute;
+            top: 95px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 0;
+            background: linear-gradient(180deg, 
+                        rgba(255, 215, 0, 0.9) 0%,
+                        rgba(255, 105, 180, 0.8) 50%, 
+                        rgba(196, 69, 105, 0.4) 80%,
+                        transparent 100%);
+            opacity: 0;
+            transition: all 0.5s ease;
+            filter: blur(1px);
+        }
+
+        .magic-connection::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 100%;
+            background: linear-gradient(180deg, 
+                        rgba(255, 215, 0, 0.5) 0%,
+                        rgba(255, 105, 180, 0.4) 50%, 
+                        transparent 100%);
+            filter: blur(3px);
+        }
+
+        .magic-connection.active {
+            height: 35px;
+            opacity: 1;
+            animation: magicPulse 1s ease-in-out infinite;
+        }
+
+        @keyframes magicPulse {
+            0%, 100% { 
+                opacity: 0.7;
+                filter: blur(1px);
+            }
+            50% { 
+                opacity: 1;
+                filter: blur(2px);
+            }
+        }
+
+        /* ============================================
+           BATTLE SCENE LAYOUT
+           ============================================ */
+
+        .battle-scene {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Battle Header */
+        .battle-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px 14px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            border: 1px solid rgba(100, 70, 120, 0.2);
+        }
+
+        .level-indicator {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+            color: rgba(200, 170, 220, 0.9);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hearts {
+            display: flex;
+            gap: 5px;
+        }
+
+        .heart {
+            width: 20px;
+            height: 18px;
+            background: linear-gradient(135deg, #c44569 0%, #8b2a4a 100%);
+            clip-path: path('M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z');
+            transform: scale(0.85);
+            box-shadow: 0 0 10px rgba(196, 69, 105, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .heart.lost {
+            background: rgba(100, 80, 100, 0.3);
+            box-shadow: none;
+        }
+
+        /* Battle Arena */
+        .battle-arena {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 100%;
+            padding: 15px 10px;
+            margin-bottom: 10px;
+            position: relative;
+            min-height: 160px;
+        }
+
+        /* Ground Effect */
+        .battle-arena::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: linear-gradient(180deg, transparent 0%, rgba(50, 30, 60, 0.4) 100%);
+            border-radius: 50%;
+        }
+
+        .character {
+            text-align: center;
+            flex: 1;
+            max-width: 130px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .character-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(0.75rem, 1.8vw, 0.85rem);
+            color: rgba(200, 170, 220, 0.8);
+            letter-spacing: 1px;
+            margin-top: 6px;
+        }
+
+        /* Hero Animation States */
+        .hero-char {
+            animation: heroIdle 3s ease-in-out infinite;
+        }
+
+        @keyframes heroIdle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .hero-char.attacking {
+            animation: heroAttack 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes heroAttack {
+            0% { transform: translateX(0) scale(1); }
+            20% { transform: translateX(10px) scale(1.05); }
+            40% { transform: translateX(100px) scale(1.1) rotate(5deg); }
+            50% { transform: translateX(100px) scale(1.1) rotate(-5deg); }
+            60% { transform: translateX(100px) scale(1.1) rotate(3deg); }
+            100% { transform: translateX(0) scale(1) rotate(0deg); }
+        }
+
+        .hero-char.attacking .knight-sword {
+            animation: swordSwing 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes swordSwing {
+            0% { transform: rotate(0deg); }
+            40% { transform: rotate(-45deg); }
+            50% { transform: rotate(60deg); }
+            60% { transform: rotate(45deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        /* Villain Animation States */
+        .villain-char {
+            animation: villainIdle 4s ease-in-out infinite;
+        }
+
+        @keyframes villainIdle {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-4px) scale(1.02); }
+        }
+
+        .villain-char.hit {
+            animation: villainHit 0.5s ease forwards;
+        }
+
+        @keyframes villainHit {
+            0% { filter: brightness(1); transform: translateX(0) scale(1); }
+            20% { filter: brightness(2.5) saturate(0.3); transform: translateX(15px) scale(0.95); }
+            40% { filter: brightness(1.8); transform: translateX(-10px) scale(1.02); }
+            60% { filter: brightness(1.4); transform: translateX(5px) scale(0.98); }
+            100% { filter: brightness(1); transform: translateX(0) scale(1); }
+        }
+
+        .villain-char.defeated {
+            animation: villainDefeat 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes villainDefeat {
+            0% { transform: scale(1) rotate(0) translateY(0); opacity: 1; filter: brightness(1); }
+            20% { transform: scale(1.2) rotate(-5deg) translateY(-10px); filter: brightness(2); }
+            40% { transform: scale(1.1) rotate(10deg) translateY(0); filter: brightness(1.5); }
+            60% { transform: scale(0.8) rotate(-15deg) translateY(20px); opacity: 0.8; }
+            80% { transform: scale(0.4) rotate(180deg) translateY(50px); opacity: 0.4; }
+            100% { transform: scale(0) rotate(360deg) translateY(80px); opacity: 0; }
+        }
+
+        /* Villain Attack Animation */
+        .villain-char.attacking {
+            animation: villainAttack 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes villainAttack {
+            0% { transform: translateX(0) scale(1); }
+            15% { transform: translateX(-10px) scale(1.1); }
+            30% { transform: translateX(-100px) scale(1.15) rotate(-5deg); }
+            45% { transform: translateX(-100px) scale(1.15) rotate(8deg); }
+            55% { transform: translateX(-100px) scale(1.15) rotate(-3deg); }
+            100% { transform: translateX(0) scale(1) rotate(0deg); }
+        }
+
+        .villain-char.attacking .villain-staff {
+            animation: staffStrike 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes staffStrike {
+            0% { transform: rotate(0deg); }
+            30% { transform: rotate(30deg); }
+            45% { transform: rotate(-60deg); }
+            55% { transform: rotate(-45deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .villain-char.attacking .villain-staff::before {
+            animation: orbPower 0.9s ease forwards;
+        }
+
+        @keyframes orbPower {
+            0% { box-shadow: 0 0 10px #9b59b6, 0 0 20px rgba(155, 89, 182, 0.5); transform: scale(1); }
+            30% { box-shadow: 0 0 30px #8e44ad, 0 0 50px #9b59b6, 0 0 70px rgba(155, 89, 182, 0.8); transform: scale(1.5); }
+            45% { box-shadow: 0 0 50px #c44569, 0 0 80px #9b59b6, 0 0 100px rgba(196, 69, 105, 0.9); transform: scale(2); }
+            100% { box-shadow: 0 0 10px #9b59b6, 0 0 20px rgba(155, 89, 182, 0.5); transform: scale(1); }
+        }
+
+        /* Hero Hit Animation */
+        .hero-char.hit {
+            animation: heroHit 0.6s ease forwards;
+        }
+
+        @keyframes heroHit {
+            0% { filter: brightness(1); transform: translateX(0) scale(1); }
+            20% { filter: brightness(0.5) saturate(1.5) hue-rotate(-30deg); transform: translateX(-20px) scale(0.9) rotate(-10deg); }
+            40% { filter: brightness(2) saturate(0.5); transform: translateX(-35px) scale(0.95) rotate(5deg); }
+            60% { filter: brightness(0.8); transform: translateX(-25px) scale(0.92) rotate(-3deg); }
+            80% { filter: brightness(1.2); transform: translateX(-10px) scale(0.97); }
+            100% { filter: brightness(1); transform: translateX(0) scale(1) rotate(0deg); }
+        }
+
+        .hero-char.dying {
+            animation: heroDying 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes heroDying {
+            0% { transform: scale(1) rotate(0) translateY(0); opacity: 1; filter: brightness(1); }
+            20% { transform: scale(1.1) rotate(5deg) translateY(-10px); filter: brightness(0.6) saturate(0.5); }
+            40% { transform: scale(0.95) rotate(-10deg) translateY(10px); filter: brightness(0.4); }
+            60% { transform: scale(0.8) rotate(15deg) translateY(30px); opacity: 0.7; }
+            80% { transform: scale(0.5) rotate(-20deg) translateY(60px); opacity: 0.4; }
+            100% { transform: scale(0.3) rotate(0deg) translateY(100px); opacity: 0; }
+        }
+
+        /* Dark Magic Effect */
+        .dark-magic-effect {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            pointer-events: none;
+            opacity: 0;
+            z-index: 10;
+        }
+
+        .dark-magic-effect.active {
+            animation: darkMagicAppear 0.5s ease-out forwards;
+        }
+
+        .dark-magic-effect::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(circle, #9b59b6 0%, #8e44ad 30%, #c44569 60%, transparent 70%);
+            border-radius: 50%;
+            box-shadow: 0 0 30px #9b59b6, 0 0 60px rgba(155, 89, 182, 0.6), 0 0 90px rgba(196, 69, 105, 0.4);
+            animation: darkPulse 0.5s ease-out;
+        }
+
+        .dark-magic-effect::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80px;
+            height: 80px;
+            transform: translate(-50%, -50%);
+            border: 3px solid rgba(155, 89, 182, 0.6);
+            border-radius: 50%;
+            animation: darkRing 0.5s ease-out;
+        }
+
+        @keyframes darkMagicAppear {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.3); }
+            30% { opacity: 1; transform: translate(-50%, -50%) scale(1.3); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(1.8); }
+        }
+
+        @keyframes darkPulse {
+            0% { transform: translate(-50%, -50%) scale(0.5); }
+            50% { transform: translate(-50%, -50%) scale(1.2); }
+            100% { transform: translate(-50%, -50%) scale(1); }
+        }
+
+        @keyframes darkRing {
+            0% { transform: translate(-50%, -50%) scale(0.5); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+        }
+
+        /* Dark Sparkles */
+        .dark-sparkle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #9b59b6;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #8e44ad, 0 0 16px rgba(155, 89, 182, 0.6);
+            animation: darkSparkleFloat 1s ease-out forwards;
+            pointer-events: none;
+        }
+
+        @keyframes darkSparkleFloat {
+            0% { opacity: 1; transform: scale(0); }
+            30% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0; transform: scale(0.3) translateY(-40px); }
+        }
+
+        /* Slash Effect */
+        .slash-effect {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            pointer-events: none;
+            opacity: 0;
+            z-index: 10;
+        }
+
+        .slash-effect.active {
+            animation: slashAppear 0.4s ease-out forwards;
+        }
+
+        .slash-effect::before {
+            content: '';
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            width: 80%;
+            height: 8px;
+            background: linear-gradient(90deg, transparent, #fff, #ffd700, transparent);
+            transform: rotate(-30deg);
+            border-radius: 4px;
+            box-shadow: 0 0 20px #ffd700, 0 0 40px rgba(255, 215, 0, 0.5);
+        }
+
+        .slash-effect::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            width: 90%;
+            height: 6px;
+            background: linear-gradient(90deg, transparent, #fff, #ffd700, transparent);
+            transform: rotate(15deg);
+            border-radius: 3px;
+            box-shadow: 0 0 15px #ffd700;
+        }
+
+        @keyframes slashAppear {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+            50% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(1.5); }
+        }
+
+        .vs-divider {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+            color: rgba(200, 100, 120, 0.8);
+            text-shadow: 0 0 20px rgba(200, 100, 120, 0.4);
+            padding: 0 8px;
+            align-self: center;
+        }
+
+        /* Health Bars */
+        .health-container {
+            width: 80px;
+            margin-top: 8px;
+        }
+
+        .health-bar {
+            height: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .health-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .health-fill.hero-hp {
+            background: linear-gradient(90deg, #4a9a7c, #2d6a5a);
+            box-shadow: 0 0 8px rgba(74, 154, 124, 0.5);
+        }
+
+        .health-fill.villain-hp {
+            background: linear-gradient(90deg, #9a4a6a, #6a2d4a);
+            box-shadow: 0 0 8px rgba(154, 74, 106, 0.5);
+        }
+
+        /* ============================================
+           QUESTION BOX - QUEEN'S MESSAGE
+           ============================================ */
+
+        .question-box {
+            width: 100%;
+            background: linear-gradient(135deg, rgba(60, 30, 50, 0.7) 0%, rgba(40, 20, 40, 0.8) 100%);
+            border: 1px solid rgba(255, 105, 180, 0.3);
+            border-radius: 12px;
+            padding: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .question-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 45%, rgba(255, 105, 180, 0.05) 50%, transparent 55%);
+            animation: shimmer 3s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .queen-message {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .queen-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #ff69b4 0%, #c44569 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.4);
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .queen-icon::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 18px;
+            height: 8px;
+            background: linear-gradient(180deg, #ffd700 0%, #daa520 100%);
+            clip-path: polygon(0% 100%, 20% 30%, 40% 100%, 50% 20%, 60% 100%, 80% 30%, 100% 100%);
+        }
+
+        .queen-icon::after {
+            content: '';
+            width: 16px;
+            height: 18px;
+            background: linear-gradient(180deg, #ffe4d0 0%, #f0c8a8 100%);
+            border-radius: 50% 50% 45% 45%;
+            margin-top: 2px;
+        }
+
+        .queen-says {
+            font-size: clamp(0.7rem, 1.8vw, 0.8rem);
+            color: rgba(255, 180, 200, 0.9);
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+
+        .question-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(0.95rem, 2.8vw, 1.15rem);
+            color: #f0e0f5;
+            margin-bottom: 14px;
+            font-weight: 500;
+            line-height: 1.5;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .option-btn {
+            padding: 11px 14px;
+            font-size: clamp(0.8rem, 1.9vw, 0.9rem);
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            background: rgba(80, 50, 100, 0.3);
+            color: rgba(240, 220, 250, 0.95);
+            border: 1px solid rgba(180, 130, 200, 0.35);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.4s;
+        }
+
+        .option-btn:hover {
+            background: rgba(120, 80, 150, 0.45);
+            border-color: rgba(200, 150, 230, 0.6);
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 5px 15px rgba(150, 100, 180, 0.3);
+        }
+
+        .option-btn:hover::before {
+            left: 100%;
+        }
+
+        .option-btn.correct {
+            background: rgba(74, 180, 130, 0.5);
+            border-color: rgba(100, 220, 170, 0.7);
+            box-shadow: 0 0 20px rgba(74, 180, 130, 0.4);
+            animation: correctPulse 0.5s ease;
+        }
+
+        @keyframes correctPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .option-btn.wrong {
+            background: rgba(200, 70, 90, 0.5);
+            border-color: rgba(240, 100, 120, 0.7);
+            animation: wrongShake 0.4s ease;
+        }
+
+        @keyframes wrongShake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-8px); }
+            75% { transform: translateX(8px); }
+        }
+
+        /* Special Valentine Question Styling */
+        .valentine-question {
+            font-size: clamp(1.6rem, 5vw, 2.2rem) !important;
+            color: #ffe4f0 !important;
+            text-align: center;
+            font-weight: 900 !important;
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.4), rgba(196, 69, 105, 0.4));
+            padding: 30px 25px !important;
+            border-radius: 16px;
+            border: 3px solid rgba(255, 105, 180, 0.8);
+            box-shadow: 0 0 50px rgba(255, 105, 180, 0.7), inset 0 0 30px rgba(255, 105, 180, 0.2);
+            animation: valentinePulse 2s ease-in-out infinite;
+            text-shadow: 0 0 20px rgba(255, 105, 180, 0.8), 2px 2px 4px rgba(0, 0, 0, 0.4);
+            letter-spacing: 1px;
+            margin: 15px 0 !important;
+        }
+
+        @keyframes valentinePulse {
+            0%, 100% { 
+                box-shadow: 0 0 30px rgba(255, 105, 180, 0.4), inset 0 0 20px rgba(255, 105, 180, 0.1);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(255, 105, 180, 0.6), inset 0 0 30px rgba(255, 105, 180, 0.2);
+                transform: scale(1.02);
+            }
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+
+        .btn-primary {
+            padding: 12px 40px;
+            font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, rgba(180, 130, 200, 0.3) 0%, rgba(120, 80, 150, 0.3) 100%);
+            color: #e8d5f0;
+            border: 1px solid rgba(180, 130, 200, 0.4);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, rgba(200, 150, 220, 0.4) 0%, rgba(140, 100, 170, 0.4) 100%);
+            border-color: rgba(200, 150, 220, 0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(150, 100, 180, 0.3);
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        /* ============================================
+           START SCREEN
+           ============================================ */
+
+        .start-scene {
+            margin-bottom: 16px;
+        }
+
+        .castle-preview {
+            width: 140px;
+            height: 130px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .castle-structure {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 90px;
+            background: linear-gradient(180deg, #4a3a5a 0%, #3d2a4a 50%, #2d1a3a 100%);
+            clip-path: polygon(
+                0% 100%, 0% 60%, 5% 60%, 5% 40%, 15% 40%, 15% 50%,
+                25% 50%, 25% 25%, 35% 25%, 35% 50%,
+                45% 50%, 45% 10%, 55% 10%, 55% 50%,
+                65% 50%, 65% 25%, 75% 25%, 75% 50%,
+                85% 50%, 85% 40%, 95% 40%, 95% 60%, 100% 60%, 100% 100%
+            );
+            box-shadow: 0 10px 40px rgba(60, 40, 80, 0.5);
+        }
+
+        .tower-left, .tower-right {
+            position: absolute;
+            bottom: 20px;
+            width: 25px;
+            height: 60px;
+            background: linear-gradient(180deg, #5a4a6a 0%, #4a3a5a 100%);
+            border-radius: 4px 4px 0 0;
+        }
+
+        .tower-left { left: 5px; }
+        .tower-right { right: 5px; }
+
+        .tower-left::before, .tower-right::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -3px;
+            width: 31px;
+            height: 12px;
+            background: linear-gradient(180deg, #6a5a7a 0%, #5a4a6a 100%);
+            clip-path: polygon(0% 100%, 10% 0%, 30% 100%, 40% 0%, 60% 100%, 70% 0%, 90% 100%, 100% 0%);
+        }
+
+        .queen-silhouette {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 30px;
+            background: rgba(255, 105, 180, 0.3);
+            border-radius: 50% 50% 30% 30%;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+            animation: silhouetteGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes silhouetteGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 105, 180, 0.4); }
+            50% { box-shadow: 0 0 30px rgba(255, 105, 180, 0.6); }
+        }
+
+        /* ============================================
+           BOSS BATTLE
+           ============================================ */
+
+        .boss-indicator {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+            color: rgba(220, 150, 170, 0.9);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 5px 18px;
+            background: rgba(150, 50, 80, 0.25);
+            border: 1px solid rgba(200, 100, 130, 0.35);
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .boss-progress {
+            display: flex;
+            gap: 6px;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .boss-stage {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(150, 100, 180, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            color: rgba(200, 170, 220, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .boss-stage.done {
+            background: rgba(74, 180, 130, 0.45);
+            border-color: rgba(100, 220, 170, 0.55);
+            color: #fff;
+        }
+
+        .boss-stage.active {
+            background: rgba(220, 160, 100, 0.45);
+            border-color: rgba(240, 190, 130, 0.65);
+            color: #fff;
+            box-shadow: 0 0 12px rgba(220, 160, 100, 0.45);
+        }
+
+        /* ============================================
+           VICTORY & DATE SCREENS
+           ============================================ */
+
+        .victory-scene {
+            display: none;
+        }
+
+        .prince-full, .queen-full {
+            width: 70px;
+            height: 100px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .prince-full .knight-character {
+            transform: scale(0.75);
+            transform-origin: bottom center;
+        }
+
+        .queen-full {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Holding Hands Element */
+        .holding-hands {
+            position: absolute;
+            bottom: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 30px;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hand-left, .hand-right {
+            width: 18px;
+            height: 18px;
+            background: linear-gradient(135deg, #ffe4d0 0%, #f0c8a8 100%);
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        .hand-left {
+            margin-right: -8px;
+        }
+
+        .hand-right {
+            margin-left: -8px;
+        }
+
+        .hand-left::before, .hand-right::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 22px;
+            height: 8px;
+            background: linear-gradient(90deg, #ffe4d0 0%, #f5d5bf 100%);
+            border-radius: 4px;
+            transform: translateY(-50%);
+        }
+
+        .hand-left::before {
+            right: 8px;
+        }
+
+        .hand-right::before {
+            left: 8px;
+        }
+
+        .hand-left::after, .hand-right::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            width: 6px;
+            height: 6px;
+            background: #ffd4c0;
+            border-radius: 50%;
+        }
+
+        .hand-left::after {
+            left: 3px;
+        }
+
+        .hand-right::after {
+            right: 3px;
+        }
+
+        /* Heart floating above hands */
+        .hands-heart {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.8rem;
+            color: #ff69b4;
+            text-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+            animation: handsHeartFloat 2s ease-in-out infinite;
+        }
+
+        @keyframes handsHeartFloat {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-8px); }
+        }
+
+        .queen-body-full {
+            width: 50px;
+            height: 70px;
+            background: linear-gradient(180deg, #ff69b4 0%, #c44569 60%, #8b2a4a 100%);
+            clip-path: polygon(30% 0%, 70% 0%, 85% 100%, 15% 100%);
+            position: relative;
+        }
+
+        .queen-head-full {
+            width: 30px;
+            height: 34px;
+            background: linear-gradient(180deg, #ffe4d0 0%, #f0c8a8 100%);
+            border-radius: 50% 50% 45% 45%;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .queen-hair-full {
+            position: absolute;
+            top: -36px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 50px;
+            background: linear-gradient(180deg, #8b4513 0%, #5a2d0a 100%);
+            border-radius: 50% 50% 40% 40%;
+            z-index: -1;
+        }
+
+        .queen-tiara-full {
+            position: absolute;
+            top: -42px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 26px;
+            height: 14px;
+            background: linear-gradient(180deg, #ffd700 0%, #daa520 100%);
+            clip-path: polygon(0% 100%, 15% 40%, 30% 100%, 50% 0%, 70% 100%, 85% 40%, 100% 100%);
+            z-index: 5;
+        }
+
+        .heart-symbol {
+            display: none;
+        }
+
+        .victory-title {
+            display: none;
+        }
+
+        .victory-text {
+            font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+            color: rgba(220, 200, 235, 0.85);
+            line-height: 1.7;
+            max-width: 380px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        /* White Unicorn Animation */
+        .horse-scene {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            margin: 30px 0;
+            overflow: visible;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .white-horse {
+            position: relative;
+            width: 280px;
+            height: 180px;
+            animation: unicornHover 3s ease-in-out infinite;
+            filter: drop-shadow(0 15px 35px rgba(255, 255, 255, 0.3));
+        }
+
+        @keyframes unicornHover {
+            0%, 100% { 
+                transform: translateY(0px) rotate(-3deg);
+            }
+            50% { 
+                transform: translateY(-25px) rotate(-5deg);
+            }
+        }
+
+        .horse-body {
+            position: absolute;
+            bottom: 55px;
+            left: 80px;
+            width: 130px;
+            height: 70px;
+            background: linear-gradient(165deg, 
+                #ffffff 0%, 
+                #fafafa 20%,
+                #f8f8f8 40%,
+                #fafafa 60%,
+                #ffffff 100%);
+            border-radius: 60% 45% 45% 65%;
+            box-shadow: 
+                inset 0 -12px 25px rgba(0, 0, 0, 0.06),
+                inset 0 8px 20px rgba(255, 255, 255, 0.8),
+                0 10px 30px rgba(0, 0, 0, 0.15);
+            z-index: 10;
+        }
+
+        .horse-body::before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 20px;
+            width: 50px;
+            height: 30px;
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.9) 0%, rgba(245, 245, 245, 0.3) 100%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Flowing Tail */
+        .unicorn-tail {
+            position: absolute;
+            bottom: 60px;
+            left: 70px;
+            width: 70px;
+            height: 90px;
+            z-index: 5;
+        }
+
+        .unicorn-tail::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 80px;
+            background: linear-gradient(145deg, 
+                #fff8f0 0%,
+                #ffe9d6 30%,
+                #ffd9b3 60%,
+                #ffcfa0 100%);
+            border-radius: 60% 40% 70% 30%;
+            transform: rotate(-25deg);
+            box-shadow: 
+                inset -3px 5px 15px rgba(255, 220, 160, 0.5),
+                0 5px 20px rgba(255, 220, 180, 0.4);
+            animation: tailFlow 2.5s ease-in-out infinite;
+        }
+
+        .unicorn-tail::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            left: 15px;
+            width: 45px;
+            height: 70px;
+            background: linear-gradient(135deg, 
+                rgba(255, 245, 230, 0.8) 0%,
+                rgba(255, 230, 200, 0.6) 50%,
+                rgba(255, 220, 180, 0.4) 100%);
+            border-radius: 50% 40% 60% 50%;
+            transform: rotate(-20deg);
+            animation: tailFlow 2.5s ease-in-out infinite 0.3s;
+        }
+
+        @keyframes tailFlow {
+            0%, 100% { transform: rotate(-25deg) translateY(0); }
+            50% { transform: rotate(-30deg) translateY(-10px); }
+        }
+
+        .horse-neck {
+            position: absolute;
+            bottom: 95px;
+            left: 165px;
+            width: 50px;
+            height: 90px;
+            background: linear-gradient(155deg, 
+                #ffffff 0%, 
+                #fafafa 30%,
+                #f5f5f5 60%,
+                #f0f0f0 100%);
+            border-radius: 55% 50% 35% 30%;
+            transform: rotate(-15deg);
+            box-shadow: 
+                inset -4px 0 12px rgba(0, 0, 0, 0.05),
+                inset 3px 6px 12px rgba(255, 255, 255, 0.6),
+                0 6px 20px rgba(0, 0, 0, 0.1);
+            z-index: 11;
+        }
+
+        .horse-head {
+            position: absolute;
+            top: -40px;
+            left: 22px;
+            width: 60px;
+            height: 55px;
+            background: linear-gradient(165deg, 
+                #ffffff 0%, 
+                #fafafa 40%,
+                #f5f5f5 70%,
+                #f2f2f2 100%);
+            border-radius: 60% 55% 50% 55%;
+            box-shadow: 
+                inset -3px 3px 12px rgba(0, 0, 0, 0.05),
+                inset 2px -3px 10px rgba(255, 255, 255, 0.7),
+                0 5px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Snout */
+        .horse-head::before {
+            content: '';
+            position: absolute;
+            bottom: 12px;
+            right: -8px;
+            width: 28px;
+            height: 22px;
+            background: linear-gradient(140deg, #fafafa 0%, #f0f0f0 100%);
+            border-radius: 45% 35% 55% 65%;
+            box-shadow: inset -2px 2px 5px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Eye */
+        .horse-head::after {
+            content: '';
+            position: absolute;
+            top: 22px;
+            right: 18px;
+            width: 7px;
+            height: 7px;
+            background: #2a2a2a;
+            border-radius: 50%;
+            box-shadow: 
+                inset 1px 1px 2px rgba(0, 0, 0, 0.5),
+                0 2px 4px rgba(255, 255, 255, 0.6);
+        }
+
+        /* Unicorn Ears */
+        .unicorn-ear-left, .unicorn-ear-right {
+            position: absolute;
+            top: -42px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 22px solid #fafafa;
+            filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.1));
+        }
+
+        .unicorn-ear-left {
+            left: 28px;
+            transform: rotate(-18deg);
+        }
+
+        .unicorn-ear-right {
+            left: 44px;
+            transform: rotate(18deg);
+        }
+
+        /* Flowing Mane */
+        .horse-mane {
+            position: absolute;
+            top: -12px;
+            left: 12px;
+            width: 45px;
+            height: 40px;
+            background: linear-gradient(165deg, 
+                #fff8f0 0%, 
+                #ffe9d6 35%, 
+                #ffd9b3 70%,
+                #ffcfa0 100%);
+            border-radius: 65% 55% 50% 60%;
+            box-shadow: 
+                -6px 8px 0 3px rgba(255, 230, 200, 0.7),
+                -10px 15px 0 4px rgba(255, 220, 180, 0.5),
+                0 3px 10px rgba(0, 0, 0, 0.08);
+            z-index: -1;
+            animation: maneFlow 2s ease-in-out infinite;
+        }
+
+        .horse-mane::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 20px;
+            width: 35px;
+            height: 50px;
+            background: linear-gradient(150deg, 
+                #fff5e6 0%, 
+                #ffe4c4 50%, 
+                #ffd6a8 100%);
+            border-radius: 55% 50% 65% 45%;
+            box-shadow: -4px 8px 0 rgba(255, 230, 200, 0.6);
+            transform: rotate(12deg);
+        }
+
+        .horse-mane::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: -8px;
+            width: 25px;
+            height: 35px;
+            background: linear-gradient(160deg, 
+                rgba(255, 240, 220, 0.9) 0%,
+                rgba(255, 225, 190, 0.7) 100%);
+            border-radius: 60% 40% 70% 30%;
+            transform: rotate(-15deg);
+        }
+
+        @keyframes maneFlow {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(-5px) translateX(-3px); }
+        }
+
+        /* Majestic Horn */
+        .unicorn-horn {
+            position: absolute;
+            top: -58px;
+            left: 36px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 50px solid #ffd700;
+            transform: rotate(-5deg);
+            filter: 
+                drop-shadow(0 0 18px rgba(255, 215, 0, 1))
+                drop-shadow(0 0 30px rgba(255, 215, 0, 0.6))
+                drop-shadow(0 4px 12px rgba(255, 215, 0, 0.5));
+            z-index: 15;
+            animation: hornGlow 2s ease-in-out infinite;
+        }
+
+        .unicorn-horn::before {
+            content: '';
+            position: absolute;
+            bottom: -48px;
+            left: -7px;
+            width: 0;
+            height: 0;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom: 46px solid #ffed4e;
+        }
+
+        .unicorn-horn::after {
+            content: '';
+            position: absolute;
+            bottom: -46px;
+            left: -4px;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 42px solid #fffacd;
+        }
+
+        @keyframes hornGlow {
+            0%, 100% { 
+                filter: 
+                    drop-shadow(0 0 18px rgba(255, 215, 0, 1))
+                    drop-shadow(0 0 30px rgba(255, 215, 0, 0.6))
+                    drop-shadow(0 4px 12px rgba(255, 215, 0, 0.5));
+            }
+            50% { 
+                filter: 
+                    drop-shadow(0 0 25px rgba(255, 215, 0, 1))
+                    drop-shadow(0 0 40px rgba(255, 215, 0, 0.8))
+                    drop-shadow(0 4px 15px rgba(255, 215, 0, 0.7));
+            }
+        }
+
+        /* Magical Wings */
+        .unicorn-wing-left, .unicorn-wing-right {
+            position: absolute;
+            top: 30px;
+            width: 75px;
+            height: 95px;
+            background: radial-gradient(ellipse at 30% 30%, 
+                rgba(255, 255, 255, 0.98) 0%, 
+                rgba(250, 250, 255, 0.95) 20%,
+                rgba(245, 245, 255, 0.90) 40%,
+                rgba(240, 240, 255, 0.85) 60%,
+                rgba(235, 235, 250, 0.75) 80%,
+                rgba(230, 230, 245, 0.6) 100%);
+            border-radius: 55% 45% 50% 50%;
+            box-shadow: 
+                inset 0 3px 20px rgba(255, 255, 255, 0.8),
+                inset 0 -5px 15px rgba(200, 200, 255, 0.4),
+                0 8px 30px rgba(255, 255, 255, 0.6),
+                0 15px 50px rgba(200, 200, 255, 0.3);
+            transform-origin: bottom center;
+            z-index: 8;
+        }
+
+        .unicorn-wing-left {
+            left: 45px;
+            animation: wingFlapLeft 1.8s ease-in-out infinite;
+        }
+
+        .unicorn-wing-right {
+            right: 120px;
+            animation: wingFlapRight 1.8s ease-in-out infinite;
+        }
+
+        /* Wing feather details */
+        .unicorn-wing-left::before, .unicorn-wing-right::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 45px;
+            height: 70px;
+            background: radial-gradient(ellipse at center, 
+                rgba(255, 252, 255, 0.85) 0%, 
+                rgba(248, 248, 255, 0.65) 50%,
+                rgba(240, 240, 255, 0.4) 100%);
+            border-radius: 50%;
+            box-shadow: inset 0 3px 12px rgba(235, 235, 255, 0.5);
+        }
+
+        /* Wing sparkle effect */
+        .unicorn-wing-left::after, .unicorn-wing-right::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(255, 230, 250, 0.4) 30%,
+                rgba(255, 215, 0, 0.35) 50%, 
+                rgba(255, 230, 250, 0.4) 70%,
+                transparent 100%);
+            border-radius: 50%;
+            animation: wingShimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes wingShimmer {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+
+        @keyframes wingFlapLeft {
+            0%, 100% { 
+                transform: rotate(-20deg) scaleY(1) translateY(0);
+            }
+            50% { 
+                transform: rotate(-50deg) scaleY(0.85) translateY(-10px);
+            }
+        }
+
+        @keyframes wingFlapRight {
+            0%, 100% { 
+                transform: rotate(20deg) scaleY(1) scaleX(-1) translateY(0);
+            }
+            50% { 
+                transform: rotate(50deg) scaleY(0.85) scaleX(-1) translateY(-10px);
+            }
+        }
+
+        .horse-legs {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: none;
+        }
+
+        .riders {
+            position: absolute;
+            bottom: 110px;
+            left: 115px;
+            display: flex;
+            gap: 5px;
+            animation: ridersAppear 1s ease-out 1.5s forwards;
+            opacity: 0;
+            z-index: 12;
+        }
+
+        @keyframes ridersAppear {
+            to { opacity: 1; }
+        }
+
+        .rider-knight {
+            width: 50px;
+            height: 65px;
+            position: relative;
+            filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+        }
+
+        .rider-knight .mini-knight {
+            transform: scale(0.55);
+            transform-origin: bottom center;
+        }
+
+        .rider-queen {
+            width: 50px;
+            height: 65px;
+            position: relative;
+            filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+        }
+
+        .rider-queen .mini-queen {
+            transform: scale(0.65);
+            transform-origin: bottom center;
+        }
+
+        /* Make princess more visible on white unicorn */
+        .mini-queen .queen-hair {
+            filter: brightness(0.95) saturate(1.3);
+        }
+
+        .mini-queen .queen-dress {
+            background: linear-gradient(180deg, 
+                #ff69b4 0%, 
+                #ff85c2 20%,
+                #ffa0d0 50%,
+                #ff85c2 80%,
+                #ff69b4 100%) !important;
+            filter: brightness(1.05) saturate(1.2);
+        }
+
+        .mini-queen .queen-tiara {
+            filter: brightness(1.1) drop-shadow(0 0 4px rgba(255, 215, 0, 0.8));
+        }
+
+        /* Magic Sparkles Around Unicorn */
+        .unicorn-sparkles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 20;
+        }
+
+        .sparkle-particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: radial-gradient(circle, #fff 0%, #ffe4b3 50%, transparent 100%);
+            border-radius: 50%;
+            animation: sparkleFloat 3s ease-in-out infinite;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+        }
+
+        .sparkle-particle:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+        .sparkle-particle:nth-child(2) { top: 40%; left: 85%; animation-delay: 0.5s; }
+        .sparkle-particle:nth-child(3) { top: 70%; left: 15%; animation-delay: 1s; }
+        .sparkle-particle:nth-child(4) { top: 30%; left: 70%; animation-delay: 1.5s; }
+        .sparkle-particle:nth-child(5) { top: 60%; left: 80%; animation-delay: 2s; }
+        .sparkle-particle:nth-child(6) { top: 50%; left: 25%; animation-delay: 2.5s; }
+
+        @keyframes sparkleFloat {
+            0%, 100% { 
+                transform: translateY(0) scale(1);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            50% { 
+                transform: translateY(-20px) scale(1.5);
+                opacity: 0.8;
+            }
+        }
+
+        /* Love Banner */
+        .love-banner {
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.95) 0%, rgba(196, 69, 105, 0.95) 100%);
+            border: 3px solid #ffd700;
+            border-radius: 15px;
+            padding: 25px 35px;
+            margin: 25px 0;
+            box-shadow: 0 10px 40px rgba(255, 105, 180, 0.5), inset 0 0 30px rgba(255, 255, 255, 0.2);
+            animation: bannerShine 3s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .love-banner::before {
+            content: '💕';
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0.1;
+            top: -10px;
+            left: 10px;
+            animation: heartFloat 4s ease-in-out infinite;
+        }
+
+        .love-banner::after {
+            content: '💕';
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0.1;
+            bottom: -10px;
+            right: 10px;
+            animation: heartFloat 4s ease-in-out infinite 2s;
+        }
+
+        @keyframes bannerShine {
+            0%, 100% { box-shadow: 0 10px 40px rgba(255, 105, 180, 0.5), inset 0 0 30px rgba(255, 255, 255, 0.2); }
+            50% { box-shadow: 0 10px 50px rgba(255, 105, 180, 0.7), inset 0 0 40px rgba(255, 255, 255, 0.3); }
+        }
+
+        @keyframes heartFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
+        }
+
+        .love-banner-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.3rem, 3.8vw, 1.7rem);
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.4);
+            line-height: 1.6;
+            font-weight: 700;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Date Screen - Hidden */
+        .date-screen {
+            display: none !important;
+        }
+
+        /* ============================================
+           GAME OVER
+           ============================================ */
+
+        .gameover-screen {
+            justify-content: center;
+            min-height: 350px;
+        }
+
+        .gameover-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .broken-heart {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .broken-heart::before, .broken-heart::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(150, 80, 100, 0.4) 0%, rgba(100, 50, 70, 0.4) 100%);
+        }
+
+        .broken-heart::before {
+            left: 0;
+            clip-path: polygon(100% 0%, 100% 30%, 85% 40%, 95% 50%, 80% 60%, 90% 75%, 50% 100%, 0% 50%, 0% 0%, 50% 25%);
+            transform: translateX(-3px) rotate(-5deg);
+        }
+
+        .broken-heart::after {
+            right: 0;
+            clip-path: polygon(0% 0%, 0% 30%, 15% 40%, 5% 50%, 20% 60%, 10% 75%, 50% 100%, 100% 50%, 100% 0%, 50% 25%);
+            transform: translateX(3px) rotate(5deg);
+        }
+
+        .gameover-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.3rem, 3.5vw, 1.6rem);
+            color: rgba(200, 130, 150, 0.9);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .gameover-text {
+            font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+            color: rgba(200, 170, 200, 0.7);
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        /* ============================================
+           EFFECTS
+           ============================================ */
+
+        .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .floating-heart {
+            position: absolute;
+            color: #c44569;
+            text-shadow: 0 0 10px rgba(196, 69, 105, 0.5);
+            animation: riseUp 4s ease-out forwards;
+        }
+
+        @keyframes riseUp {
+            0% { opacity: 1; transform: translateY(0) scale(0) rotate(0deg); }
+            20% { transform: translateY(-30px) scale(1) rotate(10deg); }
+            100% { opacity: 0; transform: translateY(-350px) scale(0.6) rotate(-10deg); }
+        }
+
+        /* Magic Sparkles */
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 6px #ff69b4, 0 0 12px rgba(255, 105, 180, 0.5);
+            animation: sparkleFloat 1.5s ease-out forwards;
+            pointer-events: none;
+        }
+
+        @keyframes sparkleFloat {
+            0% { opacity: 1; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0.5) translateY(-30px); }
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+
+        /* Tablets and smaller laptops */
+        @media (max-width: 768px) {
+            .game-container {
+                width: 95vw;
+                max-width: 95vw;
+            }
+            
+            .battle-arena {
+                padding: 12px 8px;
+                min-height: 160px;
+            }
+            
+            .tower-scene {
+                margin-bottom: 15px;
+            }
+            
+            .knight-character {
+                transform: scale(0.9);
+            }
+            
+            .villain-character {
+                transform: scale(0.9);
+            }
+            
+            .white-horse {
+                transform: scale(0.9);
+            }
+            
+            .love-banner {
+                padding: 20px 25px;
+                margin: 20px 0;
+            }
+        }
+
+        /* Mobile devices */
+        @media (max-width: 500px) {
+            body {
+                overflow-x: hidden;
+            }
+            
+            .game-container {
+                width: 98vw;
+                max-width: 98vw;
+                border-radius: 12px;
+                padding: 10px;
+            }
+            
+            .screen {
+                padding: 12px 10px;
+                max-height: 94vh;
+                overflow-y: auto;
+            }
+            
+            /* Start Screen */
+            .game-title {
+                font-size: clamp(1.8rem, 8vw, 2.2rem);
+                margin-bottom: 10px;
+            }
+            
+            .subtitle {
+                font-size: clamp(0.9rem, 3vw, 1rem);
+            }
+            
+            .story-text {
+                font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+                padding: 0 5px;
+            }
+            
+            .castle-preview {
+                width: 110px;
+                height: 100px;
+                margin-bottom: 10px;
+            }
+            
+            /* Battle Elements */
+            .battle-header {
+                margin-bottom: 8px;
+            }
+            
+            .level-indicator {
+                font-size: clamp(0.75rem, 2.5vw, 0.85rem);
+                padding: 6px 12px;
+            }
+            
+            .hearts {
+                gap: 6px;
+            }
+            
+            .heart {
+                width: 18px;
+                height: 18px;
+                font-size: 12px;
+            }
+            
+            .tower-scene {
+                margin-bottom: 12px;
+                transform: scale(0.85);
+            }
+            
+            .castle-tower {
+                transform: scale(1.2) !important;
+            }
+            
+            .battle-arena {
+                padding: 8px 5px;
+                min-height: 150px;
+                gap: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            
+            .knight-character {
+                transform: scale(0.7) !important;
+            }
+            
+            .villain-character {
+                transform: scale(0.7) !important;
+            }
+
+            .villain-character.boss-variant {
+                transform: scale(0.9) !important;
+            }
+            
+            .character-name {
+                font-size: 0.65rem;
+                margin-top: 3px;
+            }
+
+            .boss-indicator {
+                font-size: clamp(0.7rem, 2vw, 0.8rem);
+                padding: 4px 10px;
+                margin-bottom: 8px;
+            }
+            
+            .vs-divider {
+                font-size: 1rem;
+                width: 30px;
+                height: 30px;
+            }
+            
+            .health-container {
+                width: 45px;
+                height: 5px;
+            }
+            
+            /* Questions */
+            .question-box {
+                padding: 12px 10px;
+                margin-top: 10px;
+            }
+            
+            .queen-message {
+                margin-bottom: 8px;
+                gap: 6px;
+            }
+            
+            .queen-icon {
+                width: 18px;
+                height: 22px;
+            }
+            
+            .queen-says {
+                font-size: clamp(0.65rem, 2vw, 0.75rem);
+            }
+            
+            .question-text {
+                font-size: clamp(0.85rem, 2.8vw, 1rem);
+                margin-bottom: 10px;
+            }
+            
+            .valentine-question {
+                font-size: clamp(1.2rem, 4.5vw, 1.6rem) !important;
+                padding: 20px 15px !important;
+            }
+            
+            .options {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            
+            .option-btn {
+                padding: 14px 16px;
+                font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+                min-height: 48px;
+            }
+            
+            /* Boss Battle */
+            .boss-indicator {
+                font-size: clamp(0.75rem, 2.2vw, 0.85rem);
+                padding: 5px 14px;
+                margin-bottom: 8px;
+            }
+            
+            .boss-progress {
+                gap: 5px;
+                margin-bottom: 8px;
+            }
+            
+            .boss-stage {
+                width: 22px;
+                height: 22px;
+                font-size: 0.7rem;
+            }
+            
+            /* Victory Screen */
+            .horse-scene {
+                height: 220px;
+                margin: 20px 0;
+            }
+            
+            .white-horse {
+                width: 250px;
+                height: 160px;
+            }
+            
+            .riders {
+                bottom: 95px;
+                left: 95px;
+                gap: 4px;
+            }
+            
+            .rider-knight, .rider-queen {
+                width: 45px;
+                height: 55px;
+            }
+            
+            .rider-knight .mini-knight {
+                transform: scale(0.5);
+            }
+            
+            .rider-queen .mini-queen {
+                transform: scale(0.5);
+            }
+            
+            .love-banner {
+                padding: 18px 20px;
+                margin: 18px 0;
+                border-radius: 12px;
+            }
+            
+            .love-banner-text {
+                font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+                line-height: 1.5;
+            }
+            
+            .victory-text {
+                font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+                padding: 0 10px;
+                margin-bottom: 15px;
+            }
+            
+            /* Buttons */
+            .btn-primary {
+                padding: 14px 30px;
+                font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+                min-height: 48px;
+                width: 90%;
+                max-width: 280px;
+            }
+            
+            /* Game Over */
+            .gameover-icon {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .gameover-title {
+                font-size: clamp(1.2rem, 3.5vw, 1.4rem);
+            }
+            
+            .gameover-text {
+                font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+            }
+            
+            /* Unicorn wings on mobile */
+            .unicorn-wing-left, .unicorn-wing-right {
+                width: 60px;
+                height: 75px;
+            }
+            
+            .unicorn-wing-left {
+                left: 35px;
+            }
+            
+            .unicorn-wing-right {
+                right: 105px;
+            }
+        }
+
+        /* Very small phones */
+        @media (max-width: 360px) {
+            .game-container {
+                padding: 8px;
+            }
+            
+            .screen {
+                padding: 10px 8px;
+            }
+            
+            .battle-arena {
+                min-height: 120px;
+                padding: 5px;
+                gap: 8px;
+            }
+            
+            .knight-character {
+                transform: scale(0.6) !important;
+            }
+            
+            .villain-character {
+                transform: scale(0.6) !important;
+            }
+
+            .villain-character.boss-variant {
+                transform: scale(0.75) !important;
+            }
+            
+            .tower-scene {
+                transform: scale(0.75);
+            }
+            
+            .horse-scene {
+                transform: scale(0.75);
+                height: 160px;
+            }
+            
+            .love-banner {
+                padding: 15px 18px;
+            }
+            
+            .option-btn {
+                padding: 12px 14px;
+            }
+        }
+
+        /* Landscape mode on phones */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .screen {
+                max-height: 92vh;
+                overflow-y: auto;
+            }
+            
+            .game-title {
+                margin-bottom: 8px;
+            }
+            
+            .story-text {
+                margin-bottom: 10px;
+            }
+            
+            .battle-header {
+                margin-bottom: 5px;
+            }
+            
+            .tower-scene {
+                margin-bottom: 8px;
+                transform: scale(0.7);
+            }
+            
+            .battle-arena {
+                min-height: 100px;
+                padding: 5px;
+            }
+            
+            .question-box {
+                padding: 10px 8px;
+                margin-top: 8px;
+            }
+            
+            .horse-scene {
+                height: 140px;
+                margin: 10px 0;
+                transform: scale(0.7);
+            }
+            
+            .love-banner {
+                margin: 12px 0;
+                padding: 12px 15px;
+            }
+            
+            .victory-text {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background -->
+    <div class="bg-gradient"></div>
+    
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Hearts container -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <div class="game-container">
+        <!-- Start Screen -->
+        <div class="screen active" id="startScreen">
+            <div class="start-scene">
+                <div class="castle-preview">
+                    <div class="castle-structure"></div>
+                    <div class="tower-left"></div>
+                    <div class="tower-right"></div>
+                    <div class="queen-silhouette"></div>
+                </div>
+            </div>
+            <h1 class="game-title">Save The Queen</h1>
+            <p class="subtitle">A Tale of Love & Valor</p>
+            <p class="story-text">
+                The Shadow Lord has imprisoned your beloved in his dark fortress. 
+                To break the curse and free her, you must defeat his guardians. 
+                She watches from her tower, calling out answers to guide your blade.
+            </p>
+            <button class="btn-primary" onclick="startGame()">Begin Your Quest</button>
+        </div>
+
+        <!-- Battle Screen -->
+        <div class="screen" id="battleScreen">
+            <div class="battle-header">
+                <div class="level-indicator" id="levelIndicator">Stage I of V</div>
+                <div class="hearts" id="heartsDisplay">
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                </div>
+            </div>
+
+            <!-- Queen watching from tower -->
+            <div class="tower-scene">
+                <div class="castle-tower">
+                    <div class="tower-base">
+                        <div class="tower-window">
+                            <div class="queen-in-tower" id="queenInTower">
+                                <div class="queen-hair"></div>
+                                <div class="queen-head"></div>
+                                <div class="queen-tiara"></div>
+                                <div class="queen-dress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="magic-connection" id="magicConnection"></div>
+            </div>
+
+            <div class="battle-arena">
+                <div class="character hero-char" id="hero">
+                    <div class="knight-character">
+                        <div class="knight-crown"></div>
+                        <div class="knight-head">
+                            <div class="knight-face"></div>
+                        </div>
+                        <div class="knight-cape"></div>
+                        <div class="knight-body"></div>
+                        <div class="knight-sword"></div>
+                        <div class="knight-legs"></div>
+                    </div>
+                    <span class="character-name">The Knight</span>
+                    <div class="health-container">
+                        <div class="health-bar">
+                            <div class="health-fill hero-hp" id="heroHealth" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vs-divider">VS</div>
+
+                <div class="character villain-char" id="villain">
+                    <div class="villain-character" id="villainVisual">
+                        <div class="villain-staff"></div>
+                        <div class="villain-cloak"></div>
+                        <div class="villain-hood"></div>
+                        <div class="villain-eyes"></div>
+                    </div>
+                    <span class="character-name" id="villainName">Shadow Guardian</span>
+                    <div class="health-container">
+                        <div class="health-bar">
+                            <div class="health-fill villain-hp" id="villainHealth" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slash effect -->
+                <div class="slash-effect" id="slashEffect"></div>
+                <div class="dark-magic-effect" id="darkMagicEffect"></div>
+            </div>
+
+            <div class="question-box">
+                <div class="queen-message">
+                    <div class="queen-icon"></div>
+                    <span class="queen-says">The Knight asks his beloved...</span>
+                </div>
+                <p class="question-text" id="questionText">Loading...</p>
+                <div class="options" id="optionsContainer"></div>
+            </div>
+        </div>
+
+        <!-- Boss Battle Screen -->
+        <div class="screen" id="bossScreen">
+            <div class="battle-header">
+                <div class="level-indicator">Final Confrontation</div>
+                <div class="hearts" id="bossHeartsDisplay">
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                </div>
+            </div>
+
+            <!-- Queen watching from tower in boss battle -->
+            <div class="tower-scene">
+                <div class="castle-tower">
+                    <div class="tower-base">
+                        <div class="tower-window">
+                            <div class="queen-in-tower" id="bossQueenInTower">
+                                <div class="queen-hair"></div>
+                                <div class="queen-head"></div>
+                                <div class="queen-tiara"></div>
+                                <div class="queen-dress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="magic-connection" id="bossMagicConnection"></div>
+            </div>
+            
+            <div class="boss-progress" id="bossProgress">
+                <div class="boss-stage active">1</div>
+                <div class="boss-stage">2</div>
+                <div class="boss-stage">3</div>
+            </div>
+
+            <div class="battle-arena">
+                <div class="character hero-char" id="bossHero">
+                    <div class="knight-character">
+                        <div class="knight-crown"></div>
+                        <div class="knight-head">
+                            <div class="knight-face"></div>
+                        </div>
+                        <div class="knight-cape"></div>
+                        <div class="knight-body"></div>
+                        <div class="knight-sword"></div>
+                        <div class="knight-legs"></div>
+                    </div>
+                    <span class="character-name">The Knight</span>
+                </div>
+
+                <div class="vs-divider">VS</div>
+
+                <div class="character villain-char" id="bossVillain">
+                    <div class="villain-character boss-variant">
+                        <div class="villain-staff"></div>
+                        <div class="villain-cloak"></div>
+                        <div class="villain-hood"></div>
+                        <div class="villain-eyes"></div>
+                    </div>
+                    <span class="character-name">Shadow Lord</span>
+                    <div class="health-container" style="width: 90px;">
+                        <div class="health-bar">
+                            <div class="health-fill villain-hp" id="bossHealth" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slash-effect" id="bossSlashEffect"></div>
+                <div class="dark-magic-effect" id="bossDarkMagicEffect"></div>
+            </div>
+
+            <div class="boss-indicator">The Shadow Lord</div>
+
+            <div class="question-box">
+                <div class="queen-message">
+                    <div class="queen-icon"></div>
+                    <span class="queen-says">The Knight's heart speaks to his princess...</span>
+                </div>
+                <p class="question-text" id="bossQuestionText">Loading...</p>
+                <div class="options" id="bossOptionsContainer"></div>
+            </div>
+        </div>
+
+        <!-- Victory Screen -->
+        <div class="screen" id="victoryScreen">
+            <div class="victory-scene">
+                <div class="prince-full">
+                    <div class="knight-character">
+                        <div class="knight-crown"></div>
+                        <div class="knight-head">
+                            <div class="knight-face"></div>
+                        </div>
+                        <div class="knight-cape"></div>
+                        <div class="knight-body"></div>
+                        <div class="knight-sword"></div>
+                        <div class="knight-legs"></div>
+                    </div>
+                </div>
+                <div class="holding-hands">
+                    <div class="hand-left"></div>
+                    <div class="hand-right"></div>
+                    <div class="hands-heart">♥</div>
+                </div>
+                <span class="heart-symbol">♥</span>
+                <div class="queen-full">
+                    <div class="queen-body-full">
+                        <div class="queen-hair-full"></div>
+                        <div class="queen-head-full"></div>
+                        <div class="queen-tiara-full"></div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="victory-title">The Queen is Free!</h1>
+            
+            <div class="horse-scene">
+                <div class="white-horse">
+                    <div class="unicorn-sparkles">
+                        <div class="sparkle-particle"></div>
+                        <div class="sparkle-particle"></div>
+                        <div class="sparkle-particle"></div>
+                        <div class="sparkle-particle"></div>
+                        <div class="sparkle-particle"></div>
+                        <div class="sparkle-particle"></div>
+                    </div>
+                    <div class="unicorn-wing-left"></div>
+                    <div class="unicorn-wing-right"></div>
+                    <div class="unicorn-tail"></div>
+                    <div class="horse-body"></div>
+                    <div class="horse-neck">
+                        <div class="horse-head">
+                            <div class="unicorn-ear-left"></div>
+                            <div class="unicorn-ear-right"></div>
+                            <div class="unicorn-horn"></div>
+                            <div class="horse-mane"></div>
+                        </div>
+                    </div>
+                    <div class="horse-legs">
+                        <div class="horse-leg"></div>
+                        <div class="horse-leg"></div>
+                        <div class="horse-leg"></div>
+                        <div class="horse-leg"></div>
+                    </div>
+                    <div class="riders">
+                        <div class="rider-knight">
+                            <div class="knight-character mini-knight">
+                                <div class="knight-crown"></div>
+                                <div class="knight-head"><div class="knight-face"></div></div>
+                                <div class="knight-cape"></div>
+                                <div class="knight-body"></div>
+                                <div class="knight-sword"></div>
+                                <div class="knight-legs"></div>
+                            </div>
+                        </div>
+                        <div class="rider-queen">
+                            <div class="queen-in-tower mini-queen">
+                                <div class="queen-hair"></div>
+                                <div class="queen-head"></div>
+                                <div class="queen-tiara"></div>
+                                <div class="queen-dress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="love-banner">
+                <div class="love-banner-text">
+                    Together Forever! ❤️<br>
+                    Love Conquers All!
+                </div>
+            </div>
+            
+            <p class="victory-text">
+                The brave knight and his beloved queen ride away on a majestic white horse,
+                their hearts forever bound by courage and true love...
+            </p>
+        </div>
+
+
+
+        <!-- Game Over Screen -->
+        <div class="screen gameover-screen" id="gameoverScreen">
+            <div class="gameover-icon">
+                <div class="broken-heart"></div>
+            </div>
+            <h1 class="gameover-title">The Knight Has Fallen</h1>
+            <p class="gameover-text">But legends never truly die...</p>
+            <button class="btn-primary" onclick="restartGame()">Rise Again</button>
+        </div>
+    </div>
+
+    <script>
+        // Game State
+        let currentLevel = 1;
+        let lives = 3;
+        let bossQuestion = 0;
+        let villainHealth = 100;
+        let bossHealth = 100;
+        let heartSpawnInterval = null;
+        let heartSpawnRate = 3000; // milliseconds between heart spawns
+
+        const romanNumerals = ['I', 'II', 'III', 'IV', 'V'];
+
+        // Villains with better questions
+        const villains = [
+            { 
+                name: "Shadow Sentinel", 
+                question: "When my beloved is far away, what becomes of my world?", 
+                options: ["My heart feels incomplete", "Each moment stretches like an eternity", "Colors fade to gray", "The stars lose their sparkle"], 
+                answer: 2 
+            },
+            { 
+                name: "Frost Enchantress", 
+                question: "Each morning as dawn breaks, whose vision fills my heart?", 
+                options: ["Your radiant smile", "The day's noble quests", "The morning's golden light", "The kingdom's distant bells"], 
+                answer: 0 
+            },
+            { 
+                name: "Storm Warden", 
+                question: "When distance keeps us apart, what aches within my soul?", 
+                options: ["A piece of my soul is lost", "My spirit remains untroubled", "My thoughts drift to distant lands", "My heart beats the same rhythm"], 
+                answer: 0 
+            },
+            { 
+                name: "Dark Paladin", 
+                question: "For what noble purpose do I brave each day's journey?", 
+                options: ["To forge our destiny together", "To claim golden treasures", "To prove my valor alone", "To fulfill my sworn duty"], 
+                answer: 0 
+            },
+            { 
+                name: "Infernal Drake", 
+                question: "If time could stand still, which treasure would I hold forever?", 
+                options: ["Every precious moment with you", "The day I claimed my crown", "A grand voyage across the seas", "The moment of my greatest triumph"], 
+                answer: 0 
+            }
+        ];
+
+        // Boss Questions
+        const bossQuestions = [
+            { 
+                question: "She whispers to your heart... 'I'd rather die tomorrow than live a hundred years without knowing ____'", 
+                options: ["myself", "the truth", "you", "peace"], 
+                answer: 2 
+            },
+            { 
+                question: "In timeless tales, what awakens the sleeping heart?", 
+                options: ["A magical spell", "True love's kiss", "A brave deed", "A wish upon a star"], 
+                answer: 1 
+            },
+            { 
+                question: "As the stars align and the universe holds its breath... Will you grant this knight the greatest honor and be his Valentine?", 
+                options: ["Yes, for all eternity!", "Yes, across every lifetime!", "Yes, my heart is yours!", "Yes, now and forever!"], 
+                answer: -1
+            }
+        ];
+
+        // Create floating particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        // Create magic sparkles
+        function createSparkles(x, y, count = 8) {
+            const container = document.getElementById('heartsContainer');
+            for (let i = 0; i < count; i++) {
+                setTimeout(() => {
+                    const sparkle = document.createElement('div');
+                    sparkle.className = 'sparkle';
+                    sparkle.style.left = (x + (Math.random() - 0.5) * 60) + 'px';
+                    sparkle.style.top = (y + (Math.random() - 0.5) * 60) + 'px';
+                    container.appendChild(sparkle);
+                    setTimeout(() => sparkle.remove(), 1500);
+                }, i * 50);
+            }
+        }
+
+        // Show screen
+        function showScreen(screenId) {
+            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+            document.getElementById(screenId).classList.add('active');
+        }
+
+        // Update hearts display
+        function updateHearts(containerId) {
+            const container = document.getElementById(containerId);
+            const hearts = container.querySelectorAll('.heart');
+            hearts.forEach((heart, index) => {
+                if (index >= lives) {
+                    heart.classList.add('lost');
+                } else {
+                    heart.classList.remove('lost');
+                }
+            });
+        }
+
+        // Queen speaks animation
+        function queenSpeaks(isBoss = false) {
+            const queen = document.getElementById(isBoss ? 'bossQueenInTower' : 'queenInTower');
+            const magic = document.getElementById(isBoss ? 'bossMagicConnection' : 'magicConnection');
+            
+            if (queen) {
+                queen.classList.add('speaking');
+                setTimeout(() => queen.classList.remove('speaking'), 500);
+            }
+            
+            if (magic) {
+                magic.classList.add('active');
+                setTimeout(() => magic.classList.remove('active'), 2000);
+            }
+        }
+
+        // Start game
+        function startGame() {
+            currentLevel = 1;
+            lives = 3;
+            villainHealth = 100;
+            showScreen('battleScreen');
+            loadLevel();
+        }
+
+        // Load level
+        function loadLevel() {
+            const villain = villains[currentLevel - 1];
+            document.getElementById('levelIndicator').textContent = `Stage ${romanNumerals[currentLevel - 1]} of V`;
+            document.getElementById('villainName').textContent = villain.name;
+            document.getElementById('villainHealth').style.width = '100%';
+            villainHealth = 100;
+            
+            // Reset villain animation and set variant
+            const villainEl = document.getElementById('villain');
+            const villainVisual = document.getElementById('villainVisual');
+            villainEl.classList.remove('hit', 'defeated');
+            
+            // Remove old variant classes and add new one
+            villainVisual.classList.remove('variant-1', 'variant-2', 'variant-3', 'variant-4', 'variant-5');
+            villainVisual.classList.add(`variant-${currentLevel}`);
+            
+            // Update heart spawn rate for new level
+            updateHeartSpawnRate();
+            
+            loadQuestion(villain);
+            updateHearts('heartsDisplay');
+        }
+
+        // Load question
+        function loadQuestion(data) {
+            document.getElementById('questionText').textContent = data.question;
+            const container = document.getElementById('optionsContainer');
+            container.innerHTML = '';
+            
+            // Queen speaks when question loads
+            queenSpeaks();
+            
+            // Create all option buttons
+            for (let i = 0; i < data.options.length; i++) {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.textContent = data.options[i];
+                btn.addEventListener('click', function() {
+                    handleAnswer(i, data.answer, this);
+                });
+                container.appendChild(btn);
+            }
+        }
+
+        // Handle answer
+        function handleAnswer(selected, correct, btn) {
+            const buttons = document.querySelectorAll('#optionsContainer .option-btn');
+            buttons.forEach(b => {
+                b.disabled = true;
+                b.style.pointerEvents = 'none';
+            });
+
+            if (selected === correct) {
+                btn.classList.add('correct');
+                attackVillain();
+            } else {
+                btn.classList.add('wrong');
+                buttons[correct].classList.add('correct');
+                loseLife();
+            }
+        }
+
+        // Attack villain with cinematic animation
+        function attackVillain() {
+            const hero = document.getElementById('hero');
+            const villain = document.getElementById('villain');
+            const slashEffect = document.getElementById('slashEffect');
+            
+            // Hero attack animation
+            hero.classList.add('attacking');
+            
+            // Show slash effect
+            setTimeout(() => {
+                slashEffect.classList.add('active');
+                
+                // Create sparkles at villain position
+                const villainRect = villain.getBoundingClientRect();
+                createSparkles(villainRect.left + villainRect.width / 2, villainRect.top + villainRect.height / 2, 12);
+            }, 350);
+            
+            // Villain hit
+            setTimeout(() => {
+                villain.classList.add('hit');
+                villainHealth = 0;
+                document.getElementById('villainHealth').style.width = '0%';
+                slashEffect.classList.remove('active');
+            }, 400);
+
+            // Hero returns, villain starts defeat
+            setTimeout(() => {
+                hero.classList.remove('attacking');
+                villain.classList.remove('hit');
+                villain.classList.add('defeated');
+            }, 700);
+
+            // Transition to next level
+            setTimeout(() => {
+                villain.classList.remove('defeated');
+                
+                if (currentLevel < 5) {
+                    currentLevel++;
+                    loadLevel();
+                } else {
+                    startBossBattle();
+                }
+            }, 1800);
+        }
+
+        // Create dark sparkles for villain attack
+        function createDarkSparkles(x, y, count = 10) {
+            const container = document.getElementById('heartsContainer');
+            for (let i = 0; i < count; i++) {
+                setTimeout(() => {
+                    const sparkle = document.createElement('div');
+                    sparkle.className = 'dark-sparkle';
+                    sparkle.style.left = (x + (Math.random() - 0.5) * 80) + 'px';
+                    sparkle.style.top = (y + (Math.random() - 0.5) * 80) + 'px';
+                    container.appendChild(sparkle);
+                    setTimeout(() => sparkle.remove(), 1000);
+                }, i * 40);
+            }
+        }
+
+        // Villain attacks hero
+        function villainAttacksHero(isBoss = false) {
+            const hero = document.getElementById(isBoss ? 'bossHero' : 'hero');
+            const villain = document.getElementById(isBoss ? 'bossVillain' : 'villain');
+            const darkMagic = document.getElementById(isBoss ? 'bossDarkMagicEffect' : 'darkMagicEffect');
+            
+            // Villain attack animation
+            villain.classList.add('attacking');
+            
+            // Show dark magic effect
+            setTimeout(() => {
+                if (darkMagic) darkMagic.classList.add('active');
+                
+                // Create dark sparkles at hero position
+                const heroRect = hero.getBoundingClientRect();
+                createDarkSparkles(heroRect.left + heroRect.width / 2, heroRect.top + heroRect.height / 2, 12);
+            }, 400);
+            
+            // Hero gets hit
+            setTimeout(() => {
+                hero.classList.add('hit');
+                if (darkMagic) darkMagic.classList.remove('active');
+            }, 450);
+            
+            // Reset animations
+            setTimeout(() => {
+                villain.classList.remove('attacking');
+                hero.classList.remove('hit');
+            }, 900);
+        }
+
+        // Lose life
+        function loseLife() {
+            lives--;
+            updateHearts('heartsDisplay');
+            
+            // Trigger villain attack animation
+            villainAttacksHero(false);
+            
+            if (lives <= 0) {
+                // Hero dies animation
+                setTimeout(() => {
+                    const hero = document.getElementById('hero');
+                    hero.classList.add('dying');
+                }, 900);
+                setTimeout(() => showScreen('gameoverScreen'), 2400);
+            } else {
+                setTimeout(() => {
+                    const villain = villains[currentLevel - 1];
+                    loadQuestion(villain);
+                }, 1800);
+            }
+        }
+
+        // Start boss battle
+        function startBossBattle() {
+            bossQuestion = 0;
+            bossHealth = 100;
+            showScreen('bossScreen');
+            updateHearts('bossHeartsDisplay');
+            updateBossProgress();
+            
+            // Increase heart spawn rate for boss battle
+            currentLevel = 6; // Boss level
+            updateHeartSpawnRate();
+            
+            loadBossQuestion();
+        }
+
+        // Update boss progress indicators
+        function updateBossProgress() {
+            const stages = document.querySelectorAll('.boss-stage');
+            stages.forEach((stage, index) => {
+                stage.classList.remove('done', 'active');
+                if (index < bossQuestion) {
+                    stage.classList.add('done');
+                } else if (index === bossQuestion) {
+                    stage.classList.add('active');
+                }
+            });
+        }
+
+        // Load boss question
+        function loadBossQuestion() {
+            const q = bossQuestions[bossQuestion];
+            const questionElement = document.getElementById('bossQuestionText');
+            questionElement.textContent = q.question;
+            
+            // Add special styling for the Valentine question
+            if (bossQuestion === 2) {
+                questionElement.classList.add('valentine-question');
+            } else {
+                questionElement.classList.remove('valentine-question');
+            }
+            
+            // Queen speaks for boss questions too
+            queenSpeaks(true);
+            
+            const container = document.getElementById('bossOptionsContainer');
+            container.innerHTML = '';
+            
+            for (let i = 0; i < q.options.length; i++) {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.textContent = q.options[i];
+                btn.addEventListener('click', function() {
+                    handleBossAnswer(i, q.answer, this);
+                });
+                container.appendChild(btn);
+            }
+        }
+
+        // Handle boss answer
+        function handleBossAnswer(selected, correct, btn) {
+            const buttons = document.querySelectorAll('#bossOptionsContainer .option-btn');
+            buttons.forEach(b => {
+                b.disabled = true;
+                b.style.pointerEvents = 'none';
+            });
+
+            // For the Valentine question, all answers are correct
+            const isCorrect = correct === -1 || selected === correct;
+
+            if (isCorrect) {
+                btn.classList.add('correct');
+                
+                const bossVillain = document.getElementById('bossVillain');
+                const bossHero = document.getElementById('bossHero');
+                const slashEffect = document.getElementById('bossSlashEffect');
+                
+                bossHero.classList.add('attacking');
+                
+                setTimeout(() => {
+                    if (slashEffect) slashEffect.classList.add('active');
+                    const villainRect = bossVillain.getBoundingClientRect();
+                    createSparkles(villainRect.left + villainRect.width / 2, villainRect.top + villainRect.height / 2, 15);
+                }, 350);
+                
+                setTimeout(() => {
+                    bossVillain.classList.add('hit');
+                    bossHealth -= 33.33;
+                    document.getElementById('bossHealth').style.width = Math.max(0, bossHealth) + '%';
+                    if (slashEffect) slashEffect.classList.remove('active');
+                }, 400);
+
+                setTimeout(() => {
+                    bossHero.classList.remove('attacking');
+                    bossVillain.classList.remove('hit');
+                    
+                    bossQuestion++;
+                    updateBossProgress();
+                    
+                    if (bossQuestion >= 3) {
+                        bossVillain.classList.add('defeated');
+                        setTimeout(() => {
+                            createHeartExplosion();
+                            showScreen('victoryScreen');
+                            // Maximum heart intensity for victory
+                            heartSpawnRate = 400;
+                            startHeartSpawn();
+                        }, 1400);
+                    } else {
+                        loadBossQuestion();
+                    }
+                }, 700);
+            } else {
+                btn.classList.add('wrong');
+                buttons[correct].classList.add('correct');
+                
+                lives--;
+                updateHearts('bossHeartsDisplay');
+                
+                // Trigger boss attack animation
+                villainAttacksHero(true);
+                
+                if (lives <= 0) {
+                    // Hero dies animation
+                    setTimeout(() => {
+                        const hero = document.getElementById('bossHero');
+                        hero.classList.add('dying');
+                    }, 900);
+                    setTimeout(() => showScreen('gameoverScreen'), 2400);
+                } else {
+                    setTimeout(loadBossQuestion, 1800);
+                }
+            }
+        }
+
+        // Spawn a single heart
+        function spawnHeart() {
+            const container = document.getElementById('heartsContainer');
+            const symbols = ['♥', '♡', '❤', '✦', '✧'];
+            
+            const heart = document.createElement('div');
+            heart.className = 'floating-heart';
+            heart.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.bottom = '0';
+            heart.style.fontSize = (18 + Math.random() * 24) + 'px';
+            container.appendChild(heart);
+            
+            setTimeout(() => heart.remove(), 4000);
+        }
+
+        // Start spawning hearts at current rate
+        function startHeartSpawn() {
+            // Clear any existing interval
+            if (heartSpawnInterval) {
+                clearInterval(heartSpawnInterval);
+            }
+            
+            // Start spawning hearts
+            heartSpawnInterval = setInterval(() => {
+                spawnHeart();
+            }, heartSpawnRate);
+        }
+
+        // Update heart spawn rate based on game progress
+        function updateHeartSpawnRate() {
+            // Calculate spawn rate: starts at 3000ms, decreases to 800ms at boss level
+            // Level 1: 3000ms, Level 2: 2400ms, Level 3: 1800ms, Level 4: 1200ms, Level 5: 1000ms, Boss: 800ms
+            const rates = [3000, 2400, 1800, 1200, 1000, 800];
+            const levelIndex = currentLevel <= 5 ? currentLevel - 1 : 5; // Boss uses index 5
+            heartSpawnRate = rates[levelIndex];
+            startHeartSpawn(); // Restart with new rate
+        }
+
+        // Create heart explosion (for victory scenes)
+        function createHeartExplosion() {
+            const container = document.getElementById('heartsContainer');
+            const symbols = ['♥', '♡', '❤', '✦', '✧'];
+            
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.className = 'floating-heart';
+                    heart.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+                    heart.style.left = Math.random() * 100 + '%';
+                    heart.style.bottom = '0';
+                    heart.style.fontSize = (18 + Math.random() * 24) + 'px';
+                    container.appendChild(heart);
+                    
+                    setTimeout(() => heart.remove(), 4000);
+                }, i * 100);
+            }
+        }
+
+        // Restart game
+        function restartGame() {
+            lives = 3;
+            currentLevel = 1;
+            bossQuestion = 0;
+            villainHealth = 100;
+            bossHealth = 100;
+            
+            // Reset all hearts
+            document.querySelectorAll('.heart').forEach(h => h.classList.remove('lost'));
+            
+            // Reset heart spawn rate
+            updateHeartSpawnRate();
+            
+            startGame();
+        }
+
+        // Initialize
+        createParticles();
+        startHeartSpawn(); // Start spawning hearts from the beginning
+    </script>
+</body>
+</html>
