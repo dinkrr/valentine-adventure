@@ -16,7 +16,7 @@
 
         html, body {
             height: 100%;
-            overflow: hidden;
+            overflow: auto;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
@@ -2694,6 +2694,7 @@
         @media (max-width: 500px) {
             body {
                 overflow-x: hidden;
+                overflow-y: auto;
             }
             
             .game-container {
@@ -2705,8 +2706,9 @@
             
             .screen {
                 padding: 12px 10px;
-                max-height: 94vh;
+                max-height: none;
                 overflow-y: auto;
+                min-height: 100vh;
             }
             
             /* Start Screen */
